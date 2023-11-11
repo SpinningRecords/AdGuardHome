@@ -25,6 +25,8 @@ NOTE: Add new changes BELOW THIS COMMENT.
 
 ### Added
 
+- Ability to specify subnet lengths for IPv4 and IPv6 addresses, used for rate
+  limiting requests, in the configuration file ([#6368]).
 - Ability to specify multiple domain specific upstreams per line, e.g.
   `[/domain1/../domain2/]upstream1 upstream2 .. upstreamN` ([#4977]).
 
@@ -33,8 +35,15 @@ NOTE: Add new changes BELOW THIS COMMENT.
 - The height of ready-to-use filter lists has been increased ([#6358]).
 - Improved authentication failure logging ([#6357]).
 
+#### Configuration Changes
+
+- New properties `dns.ratelimit_subnet_len_ipv4` and
+  `dns.ratelimit_subnet_len_ipv6` in the configuration file ([#6368]).
+
 ### Fixed
 
+- Missing timezone on schedule form submission ([#6401]).
+- Average request processing time calculation ([#6220]).
 - Redundant shortening long client names in the Top Clients table ([#6338]).
 - Scrolling column headers in the tables ([#6337]).
 - `$important,dnsrewrite` rules do not take precedence over allowlist rules
@@ -44,12 +53,15 @@ NOTE: Add new changes BELOW THIS COMMENT.
 
 [#4977]: https://github.com/AdguardTeam/AdGuardHome/issues/4977
 [#6204]: https://github.com/AdguardTeam/AdGuardHome/issues/6204
+[#6220]: https://github.com/AdguardTeam/AdGuardHome/issues/6220
 [#6329]: https://github.com/AdguardTeam/AdGuardHome/issues/6329
 [#6335]: https://github.com/AdguardTeam/AdGuardHome/issues/6335
 [#6337]: https://github.com/AdguardTeam/AdGuardHome/issues/6337
 [#6338]: https://github.com/AdguardTeam/AdGuardHome/issues/6338
 [#6357]: https://github.com/AdguardTeam/AdGuardHome/issues/6357
 [#6358]: https://github.com/AdguardTeam/AdGuardHome/issues/6358
+[#6368]: https://github.com/AdguardTeam/AdGuardHome/issues/6368
+[#6401]: https://github.com/AdguardTeam/AdGuardHome/issues/6401
 
 <!--
 NOTE: Add new changes ABOVE THIS COMMENT.
